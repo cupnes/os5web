@@ -1,0 +1,61 @@
+#+TITLE: 自作OSについてのまとめ
+#+AUTHOR: Yuma Arakawa
+#+LANGUAGE: ja
+#+SETUPFILE: ~/git/org-html-themes/setup/theme-bigblow.setup
+#+OPTIONS: ^:{}
+
+* 成果物一覧
+** 自作OS(OS5)
+#+CAPTION: OS5(最新版)を実行している様子
+#+ATTR_HTML: :alt OS5動作のスクリーンショット :width 640
+[[file:running.gif]]
+
+| 公開日           | FDイメージ                 | ソースコード(GitHub) | 紹介したブログ記事(はてなダイアリー)       |
+|------------------+----------------------------+----------------------+--------------------------------------------|
+| 2015/11/30(最新) | [[file:release/fd_20151130.img][fd_20151130.img(45KB)]], [[file:release/fd_20151130.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20151130][tag:blog-20151130]]    | [[http://d.hatena.ne.jp/cupnes/20151130/1448897866][システムコールと特権管理などを追加しました]] |
+| 2015/10/31       | [[file:release/fd_20151031.img][fd_20151031.img(45KB)]], [[file:release/fd_20151031.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20151031][tag:blog-20151031]]    | [[http://d.hatena.ne.jp/cupnes/20151031/1446304191][メモリ管理を追加しました]]                   |
+| 2015/08/24       | [[file:release/fd_20150824.img][fd_20150824.img(36KB)]], [[file:release/fd_20150824.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20150824][tag:blog-20150824]]    | [[http://d.hatena.ne.jp/cupnes/20150824/1440423038][タスク管理を追加しました]]                   |
+| 2015/04/05(初)   | [[file:release/fd_20150405.img][fd_20150405.img(36KB)]], [[file:release/fd_20150405.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20150405][tag:blog-20150405]]    | [[http://d.hatena.ne.jp/cupnes/20150405/1428250711][x86(32ビット)用OSを作っています]]            |
+
+*** 開発リポジトリ
+- https://github.com/cupnes/os5
+
+** ビルド環境(OS5BE)
+32bitのDebian環境であれば、"build-essential"パッケージさえインストールされていれば、ビルド可能ですが、
+
+現状、クロスビルドに対応していないので、64bit環境の場合はバーチャルマシンなどで32bitのDebian環境を作成するか、
+以下のQEMUイメージファイルを使用してください。
+
+| 作成日     | ディスクイメージ(qcow2)                   |
+|------------+-------------------------------------------|
+| 2016/01/10 | [[file:release/os5be_20160110004505.qcow2.xz][os5be_20160110004505.qcow2.xz(628MB)]], [[file:release/os5be_20160110004505.qcow2.xz.md5][MD5]] |
+
+*** イメージファイルについて
+上記のイメージファイルはDebian(Jessie 32bit)のnetinstイメージファイルを、
+以下のインストール時設定でインストールし、
+| ネットワークの設定               | ホスト名                           | os5be                  |
+| ユーザとパスワードのセットアップ | rootのパスワード                   | root                   |
+|                                  | 新しいユーザの本名(フルネーム)     | user                   |
+|                                  | あなたのアカウントのユーザ名       | user                   |
+|                                  | 新しいユーザのパスワード           | user                   |
+| ソフトウェアの選択               | インストールするソフトウェアの選択 | すべてのチェックを外す |
+※ ここで挙げていない設定項目はすべてデフォルト
+
+以下のパッケージをインストール・設定済みの環境です。
+| パッケージ名    | 備考                          |
+|-----------------+-------------------------------|
+| build-essential |                               |
+| git             |                               |
+| sshfs           |                               |
+| ntp             | 同期先をntp.nict.jpで設定済み |
+
+*** イメージファイルを使用する際には、
+上記の環境はあくまでも「ビルドだけ」の環境で、Xも日本語環境もインストールされていないので、
+使用の際には、以下のようにsshfsでゲストからホストのディレクトリをマウントすると使いやすいかと思います。
+
+例) ホスト側のホームディレクトリ直下にソースコードディレクトリ"OS5"が存在する場合
+#+BEGIN_EXAMPLE
+[os5de]$ mkdir ~/os5
+[os5de]$ sshfs ホスト側のユーザ名@10.0.2.2:os5 ~/os5
+#+END_EXAMPLE
+※ IPアドレス"10.0.2.2"はQEMUにてゲストからホストへアクセスする際のIPです。
