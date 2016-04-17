@@ -21,6 +21,10 @@
 *** 開発リポジトリ
 - https://github.com/cupnes/os5
 
+** 資料
+[[http://otona-after-5.connpass.com/event/27126/][大人の放課後シリーズ#12:『【2000行弱！】x86用自作カーネルの紹介」』]] での発表資料
+#+HTML: <iframe src="http://www.slideshare.net/yarakawa/slideshelf" width="615px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+
 ** ビルド環境(OS5BE)
 32bitのDebian環境であれば、"build-essential"パッケージさえインストールされていれば、ビルド可能ですが、
 
