@@ -70,3 +70,7 @@
 
 元のorgファイルは以下で公開しています。
 - https://github.com/cupnes/os5web
+** 連絡先
+荒川 祐真 (Arakawa Yuma)
+
+E-Mail: yuarkw#gmail.com (#を@へ変更してください)
