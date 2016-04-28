@@ -1,5 +1,5 @@
 #+TITLE: 自作OSについてのまとめ
-#+AUTHOR: Yuma Arakawa
+#+AUTHOR: 荒川 祐真 (Arakawa Yuma)
 #+LANGUAGE: ja
 #+SETUPFILE: ~/git/org-html-themes/setup/theme-bigblow.setup
 #+OPTIONS: ^:{}
