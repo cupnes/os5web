@@ -60,8 +60,8 @@
 
 例) ホスト側のホームディレクトリ直下にソースコードディレクトリ"OS5"が存在する場合
 #+BEGIN_EXAMPLE
-[os5de]$ mkdir ~/os5
-[os5de]$ sshfs ホスト側のユーザ名@10.0.2.2:os5 ~/os5
+[os5be]$ mkdir ~/os5
+[os5be]$ sshfs ホスト側のユーザ名@10.0.2.2:os5 ~/os5
 #+END_EXAMPLE
 ※ IPアドレス"10.0.2.2"はQEMUにてゲストからホストへアクセスする際のIPです。
 
