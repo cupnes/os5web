@@ -1,4 +1,4 @@
-#+TITLE: 自作OSについてのまとめ
+#+TITLE: 自作OS(OS5)のまとめ
 #+AUTHOR: 荒川 祐真 (Arakawa Yuma)
 #+LANGUAGE: ja
 #+SETUPFILE: ~/git/org-html-themes/setup/theme-bigblow.setup
