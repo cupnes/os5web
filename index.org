@@ -25,6 +25,34 @@
 [[http://otona-after-5.connpass.com/event/27126/][大人の放課後シリーズ#12:『【2000行弱！】x86用自作カーネルの紹介」』]] での発表資料
 #+HTML: <iframe src="http://www.slideshare.net/yarakawa/slideshelf" width="615px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
 
+** 動作確認方法
+QEMUによるx86(32bit)仮想マシンで動作確認を行っています。
+
+*** qemu-system-i386コマンドを用いた方法
+以下の様に、コマンドラインオプション"-fda"にOS5のFDイメージを指定して実行することで、OS5を起動できます。
+#+BEGIN_EXAMPLE
+[PC]$ qemu-system-i386 -fda fd.img
+#+END_EXAMPLE
+
+開発リポジトリ(GitHub)をclone済みであれば、cloneしたディレクトリ直下で以下のコマンドを実行することで、OS5を起動することもできます。
+#+BEGIN_EXAMPLE
+[PC]$ make run
+#+END_EXAMPLE
+※ FDイメージが生成されていなければ、自動でビルドも行われます。
+
+*** PNaCL QEMUを用いた方法
+PNaClを使用してGoogle Chromeへ移植されている[[http://neo.idletime.tokyo/web/qemu/][PNaCL QEMU]]でも動作することを確認しています。
+
+以下の手順で、OS5をGoogle Chrome上で試してみることができます。
+
+1. [[http://neo.idletime.tokyo/web/qemu/i386.html][PNaCL QEMUのターゲットCPU i386のページ]]へアクセス
+2. 表示されるパラメータの内、「記憶装置」の「CD-ROM」のチェックを外し、「FLOPPY」にチェックを付ける(その他のパラメータはデフォルトのまま)
+3. 「オプション生成」をクリック
+4. OS5のFDイメージを「fda」というファイル名へリネーム
+5. 「Drag & Drop」の領域へOS5のFDイメージをドラッグ&ドロップ
+6. Google Chromeが動作しているホスト側のOSに合わせて、「HOST OS 32bit」あるいは「HOST OS 64bit」をクリック
+7. OS5が起動
+
 ** ビルド環境(OS5BE)
 32bitのDebian環境であれば、"build-essential"パッケージさえインストールされていれば、ビルド可能ですが、
 
