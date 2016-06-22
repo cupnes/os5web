@@ -23,7 +23,7 @@
 
 ** 資料
 [[http://otona-after-5.connpass.com/event/27126/][大人の放課後シリーズ#12:『【2000行弱！】x86用自作カーネルの紹介」』]] での発表資料
-#+HTML: <iframe src="http://www.slideshare.net/yarakawa/slideshelf" width="615px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+#+HTML: <iframe src="http://www.slideshare.net/slideshow/embed_code/key/vBMVCnIlIrTg8O" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http//www.slideshare.net/yarakawa/2000x86" title="【2000行弱!】x86用自作カーネルの紹介" target="_blank">【2000行弱!】x86用自作カーネルの紹介</a> </strong> from <strong><a href="http://www.slideshare.net/yarakawa" target="_blank">yarakawa</a></strong> </div>
 
 ** 動作確認方法
 QEMUによるx86(32bit)仮想マシンで動作確認を行っています。
