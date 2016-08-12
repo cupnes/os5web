@@ -1,5 +1,5 @@
 #+TITLE: 自作OS(OS5)のまとめ
-#+AUTHOR: 荒川 祐真 (Arakawa Yuma)
+#+AUTHOR: 大神 祐真 (Ohgami Yuma)
 #+LANGUAGE: ja
 #+SETUPFILE: ~/git/org-html-themes/setup/theme-bigblow.setup
 #+OPTIONS: ^:{}
@@ -99,6 +99,6 @@ PNaClを使用してGoogle Chromeへ移植されている[[http://neo.idletime.t
 元のorgファイルは以下で公開しています。
 - https://github.com/cupnes/os5web
 ** 連絡先
-荒川 祐真 (Arakawa Yuma)
+大神 祐真 (Ohgami Yuma)
 
-E-Mail: yuarkw#gmail.com (#を@へ変更してください)
+E-Mail: yuma#ohgami.jp (#を@へ変更してください)
