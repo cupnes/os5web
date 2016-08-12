@@ -61,4 +61,5 @@ PNaClを使用してGoogle Chromeへ移植されている[[http://neo.idletime.t
 ** 連絡先
 大神 祐真 (Ohgami Yuma)
 
-E-Mail: yuma#ohgami.jp (#を@へ変更してください)
+- Web :: http://yuma.ohgami.jp
+- E-Mail :: yuma#ohgami.jp (#を@へ変更してください)
