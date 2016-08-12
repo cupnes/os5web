@@ -26,7 +26,7 @@
 #+HTML: <iframe src="http://www.slideshare.net/slideshow/embed_code/key/vBMVCnIlIrTg8O" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http//www.slideshare.net/yarakawa/2000x86" title="【2000行弱!】x86用自作カーネルの紹介" target="_blank">【2000行弱!】x86用自作カーネルの紹介</a> </strong> from <strong><a href="http://www.slideshare.net/yarakawa" target="_blank">yarakawa</a></strong> </div>
 
 ** 動作確認方法
-QEMUによるx86(32bit)仮想マシンで動作確認を行っています。
+Debian 8(amd64)上でビルド・動作確認を行っています。([[https://github.com/planset/][Daisuke Igarashi]]さんの[[https://github.com/cupnes/os5/commit/e708f232e5e3d0099fdee76e32aa8f1d5bfac656][パッチ]]でamd64上でi386向けのビルドができるようになりました。)
 
 *** qemu-system-i386コマンドを用いた方法
 以下の様に、コマンドラインオプション"-fda"にOS5のFDイメージを指定して実行することで、OS5を起動できます。
@@ -52,46 +52,6 @@ PNaClを使用してGoogle Chromeへ移植されている[[http://neo.idletime.t
 5. 「Drag & Drop」の領域へOS5のFDイメージをドラッグ&ドロップ
 6. Google Chromeが動作しているホスト側のOSに合わせて、「HOST OS 32bit」あるいは「HOST OS 64bit」をクリック
 7. OS5が起動
-
-** ビルド環境(OS5BE)
-32bitのDebian環境であれば、"build-essential"パッケージさえインストールされていれば、ビルド可能ですが、
-
-現状、クロスビルドに対応していないので、64bit環境の場合はバーチャルマシンなどで32bitのDebian環境を作成するか、
-以下のQEMUイメージファイルを使用してください。
-
-| 作成日     | ディスクイメージ(qcow2)                   |
-|------------+-------------------------------------------|
-| 2016/01/10 | [[file:release/os5be_20160110004505.qcow2.xz][os5be_20160110004505.qcow2.xz(628MB)]], [[file:release/os5be_20160110004505.qcow2.xz.md5][MD5]] |
-
-*** イメージファイルについて
-上記のイメージファイルはDebian(Jessie 32bit)のnetinstイメージファイルを、
-以下のインストール時設定でインストールし、
-| ネットワークの設定               | ホスト名                           | os5be                  |
-| ユーザとパスワードのセットアップ | rootのパスワード                   | root                   |
-|                                  | 新しいユーザの本名(フルネーム)     | user                   |
-|                                  | あなたのアカウントのユーザ名       | user                   |
-|                                  | 新しいユーザのパスワード           | user                   |
-| ソフトウェアの選択               | インストールするソフトウェアの選択 | すべてのチェックを外す |
-※ ここで挙げていない設定項目はすべてデフォルト
-
-以下のパッケージをインストール・設定済みの環境です。
-| パッケージ名    | 備考                          |
-|-----------------+-------------------------------|
-| build-essential |                               |
-| git             |                               |
-| sshfs           |                               |
-| ntp             | 同期先をntp.nict.jpで設定済み |
-
-*** イメージファイルを使用する際には、
-上記の環境はあくまでも「ビルドだけ」の環境で、Xも日本語環境もインストールされていないので、
-使用の際には、以下のようにsshfsでゲストからホストのディレクトリをマウントすると使いやすいかと思います。
-
-例) ホスト側のホームディレクトリ直下にソースコードディレクトリ"OS5"が存在する場合
-#+BEGIN_EXAMPLE
-[os5be]$ mkdir ~/os5
-[os5be]$ sshfs ホスト側のユーザ名@10.0.2.2:os5 ~/os5
-#+END_EXAMPLE
-※ IPアドレス"10.0.2.2"はQEMUにてゲストからホストへアクセスする際のIPです。
 
 ** このページについて
 このページはEmacsのorg-modeで作成し、[[https://github.com/fniessen/org-html-themes][org-html-themes]] のテーマを使用してHTMLへエクスポートしています。
