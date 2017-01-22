@@ -10,13 +10,15 @@
 #+ATTR_HTML: :alt OS5動作のスクリーンショット :width 640
 [[file:running.gif]]
 
-| 公開日           | FDイメージ                 | ソースコード(GitHub) | 紹介したブログ記事(はてなダイアリー)                 |
-|------------------+----------------------------+----------------------+------------------------------------------------------|
-| 2016/02/08(最新) | [[file:release/fd_20160208.img][fd_20160208.img(49KB)]], [[file:release/fd_20160208.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20160208][tag:blog-20160208]]    | [[http://d.hatena.ne.jp/cupnes/20160208/1454943337][自作OSにファイルシステム・アプリローダを追加しました]] |
-| 2015/11/30       | [[file:release/fd_20151130.img][fd_20151130.img(45KB)]], [[file:release/fd_20151130.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20151130][tag:blog-20151130]]    | [[http://d.hatena.ne.jp/cupnes/20151130/1448897866][システムコールと特権管理などを追加しました]]           |
-| 2015/10/31       | [[file:release/fd_20151031.img][fd_20151031.img(45KB)]], [[file:release/fd_20151031.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20151031][tag:blog-20151031]]    | [[http://d.hatena.ne.jp/cupnes/20151031/1446304191][メモリ管理を追加しました]]                             |
-| 2015/08/24       | [[file:release/fd_20150824.img][fd_20150824.img(36KB)]], [[file:release/fd_20150824.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20150824][tag:blog-20150824]]    | [[http://d.hatena.ne.jp/cupnes/20150824/1440423038][タスク管理を追加しました]]                             |
-| 2015/04/05(初)   | [[file:release/fd_20150405.img][fd_20150405.img(36KB)]], [[file:release/fd_20150405.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20150405][tag:blog-20150405]]    | [[http://d.hatena.ne.jp/cupnes/20150405/1428250711][x86(32ビット)用OSを作っています]]                      |
+| 公開日           | FDイメージ                 | ソースコード(GitHub) | 紹介したブログ記事(はてなダイアリー)                    |
+|------------------+----------------------------+----------------------+---------------------------------------------------------|
+| 2017/01/23(最新) | [[file:release/fd_20170123.img][fd_20170123.img(53KB)]], [[file:release/fd_20170123.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20170123][tag:blog-20170123]]    | [[http://d.hatena.ne.jp/cupnes/20170123/1485119827][ファイルシステムでマルチブロックに対応しました]]          |
+| 2016/12/13       | [[file:release/fd_20161213.img][fd_20161213.img(53KB)]], [[file:release/fd_20161213.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20161213][tag:blog-20161213]]    | [[http://d.hatena.ne.jp/cupnes/20161213/1481575702][自作OS(OS5)の紹介とユーザーランド周りの機能追加について]] |
+| 2016/02/08       | [[file:release/fd_20160208.img][fd_20160208.img(49KB)]], [[file:release/fd_20160208.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20160208][tag:blog-20160208]]    | [[http://d.hatena.ne.jp/cupnes/20160208/1454943337][自作OSにファイルシステム・アプリローダを追加しました]]    |
+| 2015/11/30       | [[file:release/fd_20151130.img][fd_20151130.img(45KB)]], [[file:release/fd_20151130.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20151130][tag:blog-20151130]]    | [[http://d.hatena.ne.jp/cupnes/20151130/1448897866][システムコールと特権管理などを追加しました]]              |
+| 2015/10/31       | [[file:release/fd_20151031.img][fd_20151031.img(45KB)]], [[file:release/fd_20151031.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20151031][tag:blog-20151031]]    | [[http://d.hatena.ne.jp/cupnes/20151031/1446304191][メモリ管理を追加しました]]                                |
+| 2015/08/24       | [[file:release/fd_20150824.img][fd_20150824.img(36KB)]], [[file:release/fd_20150824.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20150824][tag:blog-20150824]]    | [[http://d.hatena.ne.jp/cupnes/20150824/1440423038][タスク管理を追加しました]]                                |
+| 2015/04/05(初)   | [[file:release/fd_20150405.img][fd_20150405.img(36KB)]], [[file:release/fd_20150405.img.md5][MD5]] | [[https://github.com/cupnes/os5/releases/tag/blog-20150405][tag:blog-20150405]]    | [[http://d.hatena.ne.jp/cupnes/20150405/1428250711][x86(32ビット)用OSを作っています]]                         |
 
 *** 開発リポジトリ
 - https://github.com/cupnes/os5
